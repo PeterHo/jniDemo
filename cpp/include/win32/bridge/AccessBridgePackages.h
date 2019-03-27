@@ -31,7 +31,7 @@
 #ifndef __AccessBridgePackages_H__
 #define __AccessBridgePackages_H__
 
-#include <jni.h>
+#include "../../../jni.h"
 #include <windows.h>
 
 #ifdef __cplusplus

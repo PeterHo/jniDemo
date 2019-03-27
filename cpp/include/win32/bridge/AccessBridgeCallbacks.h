@@ -35,7 +35,7 @@
 #ifndef __AccessBridgeCallbacks_H__
 #define __AccessBridgeCallbacks_H__
 
-#include <jni.h>
+#include "../../../jni.h"
 #include "AccessBridgePackages.h"
 
 #ifdef __cplusplus

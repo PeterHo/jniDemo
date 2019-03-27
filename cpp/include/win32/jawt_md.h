@@ -27,7 +27,7 @@
 #define _JAVASOFT_JAWT_MD_H_
 
 #include <windows.h>
-#include "jawt.h"
+#include "../../jawt.h"
 
 #ifdef __cplusplus
 extern "C" {
