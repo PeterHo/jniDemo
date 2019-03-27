@@ -28,7 +28,7 @@ class NativeLibLoader {
     private static boolean initialized = false;
     private static final String nativePath = "../../lib/";
     private static final String nativeResourcePath = "/lib/";
-    private static final String[] libNames = new String[]{"base64"};
+    private static final String[] libNames = new String[]{"linuxbase64"};
 
     static synchronized void initBase64() throws IOException {
         if (!initialized) {
