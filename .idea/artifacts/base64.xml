@@ -2,7 +2,7 @@
   <artifact type="jar" name="base64">
     <output-path>$PROJECT_DIR$/out/artifacts/base64</output-path>
     <root id="archive" name="base64.jar">
-      <element id="module-output" name="HelloWorld" />
+      <element id="module-output" name="jniDemo" />
     </root>
   </artifact>
 </component>
