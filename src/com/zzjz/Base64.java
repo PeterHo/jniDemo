@@ -6,7 +6,7 @@ import java.io.Serializable;
 public class Base64 implements Serializable {
     static {
         try {
-            NativeLibLoader.initBase64();
+            NativeLibLoader.initBase64(new String[]{"linuxbase64"});
         } catch (IOException e) {
             e.printStackTrace();
         }

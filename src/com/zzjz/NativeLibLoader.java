@@ -28,9 +28,9 @@ class NativeLibLoader {
     private static boolean initialized = false;
     private static final String nativePath = "../../lib/";
     private static final String nativeResourcePath = "/lib/";
-    private static final String[] libNames = new String[]{"linuxbase64"};
+    // private static final String[] libNames = new String[]{"linuxbase64"};
 
-    static synchronized void initBase64() throws IOException {
+    static synchronized void initBase64(String[] libNames) throws IOException {
         if (!initialized) {
             for (String libName : libNames) {
                 smartLoad(libName);
@@ -54,9 +54,9 @@ class NativeLibLoader {
      * @throws IOException              If temporary file creation or read/write operation fails
      * @throws IllegalArgumentException If source file (param path) does not exist
      * @throws IllegalArgumentException If the path is not absolute or if the filename is shorter than
-     * three characters
+     *                                  three characters
      */
-    private static void loadLibraryFromJar(String path) throws IOException, IllegalArgumentException{
+    private static void loadLibraryFromJar(String path) throws IOException, IllegalArgumentException {
         String temp = createTempFileFromResource(path);
         // Finally, load the library
         System.load(temp);
@@ -71,6 +71,7 @@ class NativeLibLoader {
      * <p/>
      * The restrictions of {@link File#createTempFile(java.lang.String, java.lang.String)} apply to
      * {@code path}.
+     *
      * @param path Path to the resources in the jar
      * @return The created temp file.
      * @throws IOException
